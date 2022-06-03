@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- applications/operators/azure-service-operator.yaml
 - applications/dev/guestbook.yaml
 - applications/test/guestbook.yaml
 - applications/prod/guestbook.yaml
