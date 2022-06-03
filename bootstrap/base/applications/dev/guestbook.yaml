@@ -10,11 +10,13 @@ spec:
   source:
     repoURL: https://github.com/jem2305/argocd-test.git
     targetRevision: kustomize-guestbook
-    path: kustomize-guestbook/overlays/minikube
+    path: kustomize-guestbook/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: dev
   syncPolicy:
     automated:
       prune: true
       selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
