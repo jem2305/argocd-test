@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - applications/tekton-pipelines/tekton-dashboard.yaml
 # - applications/dev/azure-infra.yaml
-# - applications/dev/guestbook.yaml
-# - applications/test/guestbook.yaml
-# - applications/prod/guestbook.yaml
+- applications/dev/guestbook.yaml
+- applications/test/guestbook.yaml
+- applications/prod/guestbook.yaml
