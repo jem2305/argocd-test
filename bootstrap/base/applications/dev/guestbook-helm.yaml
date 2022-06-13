@@ -11,6 +11,13 @@ spec:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
     targetRevision: master
     path: helm-guestbook
+    helm:
+      parameters:
+      - name: ingress.enabled
+        value: true
+      - name: ingress.hosts
+        value:
+          - guestbook.test.192.168.59.101.nip.io
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
