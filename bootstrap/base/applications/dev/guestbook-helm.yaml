@@ -15,9 +15,8 @@ spec:
       parameters:
       - name: ingress.enabled
         value: true
-      - name: ingress.hosts
-        value:
-          - guestbook.test.192.168.59.101.nip.io
+      - name: ingress.hosts.0
+        value: guestbook.test.192.168.59.101.nip.io
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
